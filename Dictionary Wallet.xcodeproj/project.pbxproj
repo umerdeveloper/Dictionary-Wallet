@@ -15,6 +15,7 @@
 		CBC7DDE32435B56B00E376A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC7DDE12435B56B00E376A8 /* LaunchScreen.storyboard */; };
 		CBC7DDF02435B62900E376A8 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DDEE2435B62800E376A8 /* Definitions.swift */; };
 		CBC7DDF12435B62900E376A8 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DDEF2435B62900E376A8 /* Json4Swift_Base.swift */; };
+		CBC7DDF42435ECAB00E376A8 /* Hide+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DDF32435ECAB00E376A8 /* Hide+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CBC7DDE42435B56B00E376A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC7DDEE2435B62800E376A8 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		CBC7DDEF2435B62900E376A8 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		CBC7DDF32435ECAB00E376A8 /* Hide+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hide+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		CBC7DDD52435B56700E376A8 /* Dictionary Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				CBC7DDF22435EC9900E376A8 /* Extension */,
 				CBC7DDEA2435B5E500E376A8 /* Supporting Files */,
 				CBC7DDED2435B60900E376A8 /* Model */,
 				CBC7DDEB2435B5F900E376A8 /* Controller */,
@@ -103,6 +106,14 @@
 				CBC7DDEF2435B62900E376A8 /* Json4Swift_Base.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CBC7DDF22435EC9900E376A8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CBC7DDF32435ECAB00E376A8 /* Hide+Keyboard.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC7DDF42435ECAB00E376A8 /* Hide+Keyboard.swift in Sources */,
 				CBC7DDF02435B62900E376A8 /* Definitions.swift in Sources */,
 				CBC7DDDB2435B56700E376A8 /* ViewController.swift in Sources */,
 				CBC7DDD72435B56700E376A8 /* AppDelegate.swift in Sources */,

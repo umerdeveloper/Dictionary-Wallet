@@ -18,6 +18,9 @@ class ViewController: UIViewController, URLSessionDelegate {
     // MARK: - UI Properties
     @IBOutlet weak var searchButtonOutlet: UIButton!
     @IBOutlet weak var wordTextField: UITextField!
+    @IBOutlet weak var searchedWordLabel: UILabel!
+    @IBOutlet weak var defininationLabel: UILabel!
+    @IBOutlet weak var exampleLabel: UILabel!
     
     // MARK: - API Token
     private let apiToken: String = "Token 26db1439d6e565db2225c9291b6ceb1a9fc0c8cf"
@@ -27,6 +30,7 @@ class ViewController: UIViewController, URLSessionDelegate {
         super.viewDidLoad()
         searchButtonOutlet.layer.cornerRadius = 8
         wordTextField.becomeFirstResponder()
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - UI Methods
@@ -48,18 +52,25 @@ class ViewController: UIViewController, URLSessionDelegate {
             if let data = data {
                 let decoder = JSONDecoder()
                 do {
-                    let word =  try decoder.decode(Json4Swift_Base.self, from: data)
-                    print(word.definitions!)
+                    let fetchedJSONData =  try decoder.decode(Json4Swift_Base.self, from: data)
+                    self.jsonData(json: fetchedJSONData)
                 }
                 catch { return }
+            } else {
+                return 
             }
         }
         task.resume()
     }
     
     
-    func jsonFormatData(data: JSON) {
+    func jsonData(json: Json4Swift_Base) {
         
+        DispatchQueue.main.async {
+            self.searchedWordLabel.text = "Word: \(json.word!)"
+            self.exampleLabel.text = "Example: \(json.definitions![0].example!)"
+            self.defininationLabel.text = "Defination: \(json.definitions![0].definition!)"
+        }
     }
 }
 
