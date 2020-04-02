@@ -13,6 +13,8 @@
 		CBC7DDDE2435B56700E376A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC7DDDC2435B56700E376A8 /* Main.storyboard */; };
 		CBC7DDE02435B56B00E376A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC7DDDF2435B56B00E376A8 /* Assets.xcassets */; };
 		CBC7DDE32435B56B00E376A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC7DDE12435B56B00E376A8 /* LaunchScreen.storyboard */; };
+		CBC7DDF02435B62900E376A8 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DDEE2435B62800E376A8 /* Definitions.swift */; };
+		CBC7DDF12435B62900E376A8 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7DDEF2435B62900E376A8 /* Json4Swift_Base.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CBC7DDDF2435B56B00E376A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBC7DDE22435B56B00E376A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC7DDE42435B56B00E376A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC7DDEE2435B62800E376A8 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		CBC7DDEF2435B62900E376A8 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		CBC7DDD52435B56700E376A8 /* Dictionary Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				CBC7DDD62435B56700E376A8 /* AppDelegate.swift */,
-				CBC7DDD82435B56700E376A8 /* SceneDelegate.swift */,
-				CBC7DDDA2435B56700E376A8 /* ViewController.swift */,
-				CBC7DDDC2435B56700E376A8 /* Main.storyboard */,
+				CBC7DDEA2435B5E500E376A8 /* Supporting Files */,
+				CBC7DDED2435B60900E376A8 /* Model */,
+				CBC7DDEB2435B5F900E376A8 /* Controller */,
+				CBC7DDEC2435B60000E376A8 /* View */,
 				CBC7DDDF2435B56B00E376A8 /* Assets.xcassets */,
-				CBC7DDE12435B56B00E376A8 /* LaunchScreen.storyboard */,
 				CBC7DDE42435B56B00E376A8 /* Info.plist */,
 			);
 			path = "Dictionary Wallet";
+			sourceTree = "<group>";
+		};
+		CBC7DDEA2435B5E500E376A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBC7DDD62435B56700E376A8 /* AppDelegate.swift */,
+				CBC7DDD82435B56700E376A8 /* SceneDelegate.swift */,
+				CBC7DDE12435B56B00E376A8 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBC7DDEB2435B5F900E376A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBC7DDDA2435B56700E376A8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CBC7DDEC2435B60000E376A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBC7DDDC2435B56700E376A8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CBC7DDED2435B60900E376A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBC7DDEE2435B62800E376A8 /* Definitions.swift */,
+				CBC7DDEF2435B62900E376A8 /* Json4Swift_Base.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC7DDF02435B62900E376A8 /* Definitions.swift in Sources */,
 				CBC7DDDB2435B56700E376A8 /* ViewController.swift in Sources */,
 				CBC7DDD72435B56700E376A8 /* AppDelegate.swift in Sources */,
+				CBC7DDF12435B62900E376A8 /* Json4Swift_Base.swift in Sources */,
 				CBC7DDD92435B56700E376A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 646XC4LJ39;
 				INFOPLIST_FILE = "Dictionary Wallet/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.developers.Dictionary-Wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 646XC4LJ39;
 				INFOPLIST_FILE = "Dictionary Wallet/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.developers.Dictionary-Wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

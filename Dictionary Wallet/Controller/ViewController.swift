@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var searchButtonOutlet: UIButton!
+    @IBOutlet weak var wordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        searchButtonOutlet.layer.cornerRadius = 8
     }
-
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        
+        
+        
+    }
+    
 
 }
 
